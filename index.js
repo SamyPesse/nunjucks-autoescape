@@ -22,10 +22,11 @@ function AutoEscapeExtension(_env) {
     };
 
     this.run = function(context, mode, body) {
-        var ret, before = _env.autoesc;
-        _env.autoesc = !!mode;
+        var opts = _env.opts? _env.opts : _env;
+        var ret, before = opts.autoescape;
+        opts.autoescape = !!mode;
         ret = new nunjucks.runtime.SafeString(body());
-        _env.autoesc = before;
+        opts.autoescape = before;
         return ret;
     };
 }

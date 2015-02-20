@@ -4,7 +4,9 @@ var AutoEscapeExtension = require("../");
 
 
 describe('Autoescape', function () {
-    var env = new nunjucks.Environment();
+    var env = new nunjucks.Environment([], {
+        autoescape: true
+    });
 
     it('should correctly be added as an extension', function() {
         env.addExtension('AutoEscapeExtension', new AutoEscapeExtension(env));
