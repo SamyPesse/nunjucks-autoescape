@@ -23,10 +23,13 @@ function AutoEscapeExtension(_env) {
 
     this.run = function(context, mode, body) {
         var opts = _env.opts? _env.opts : _env;
-        var ret, before = opts.autoescape;
-        opts.autoescape = !!mode;
+        var key = opts.autoescape !== undefined? "autoescape" : "autoesc";
+
+
+        var ret, before = opts[key];
+        opts[key] = !!mode;
         ret = new nunjucks.runtime.SafeString(body());
-        opts.autoescape = before;
+        opts[key] = before;
         return ret;
     };
 }
