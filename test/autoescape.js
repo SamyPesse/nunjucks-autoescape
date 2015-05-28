@@ -1,6 +1,6 @@
 var nunjucks = require("nunjucks");
 var assert = require("assert");
-var AutoEscapeExtension = require("../");
+var AutoEscapeExtension = require("../")(nunjucks);
 
 
 describe('Autoescape', function () {
