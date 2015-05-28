@@ -13,7 +13,7 @@ $ npm install nunjucks-autoescape
 ### How to use it?
 
 ```js
-var AutoEscapeExtension = require("nunjucks-autoescape");
+var AutoEscapeExtension = require("nunjucks-autoescape")(nunjucks);
 
 env.addExtension('AutoEscapeExtension', new AutoEscapeExtension(env));
 ```
