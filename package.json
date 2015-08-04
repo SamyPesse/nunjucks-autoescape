@@ -6,7 +6,7 @@
     "main": "index.js",
     "devDependencies": {
         "mocha": "1.18.2",
-        "nunjucks": ">=1.0.0"
+        "nunjucks": "*"
     },
     "scripts": {
         "test": "export TESTING=true; mocha --reporter list"
