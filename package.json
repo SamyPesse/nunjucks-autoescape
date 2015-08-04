@@ -1,6 +1,6 @@
 {
     "name": "nunjucks-autoescape",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "homepage": "https://github.com/SamyPesse/nunjucks-autoescape",
     "description": "Nunjucks extension that brings a 'autoescape' tag",
     "main": "index.js",
